@@ -1,0 +1,107 @@
+/* content.css */
+
+.button-container {
+  display: flex; /* Use flexbox to align items horizontally */
+  align-items: flex-end; /* Vertically align items in the center */
+  position: sticky;
+  margin-bottom: 5px;
+  z-index: 100;
+}
+
+.enhance-button {
+  padding: 4px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 20%;
+  outline: none;
+  filter: grayscale(100%);
+  cursor: not-allowed;
+  
+}
+
+
+
+
+
+
+/* Keyframes */
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes falls {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 100px;
+  }
+}
+
+.enhance-button img.wiggle {
+  animation: wiggle 1.5s infinite ;
+}
+.promptload,
+.textanimate{
+  animation: falls 1s ease 0.3s infinite ;}
+
+.textarea-has-text .enhance-button{
+  animation: ease 0.8;
+  background-color: #a658ff;
+  filter: none;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s, filter 0.3s;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+
+}
+
+.textarea-has-text .enhance-button:hover {
+  transform: rotate(-10deg);
+  background-color: #a658ff;
+  filter: brightness(80%);
+}
+
+.promptloadbutton {
+  background-color: transparent;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid #5500ff;
+  border-top: 2px solid #fff;
+  animation: spinner1 600ms linear infinite;
+  }
+  @keyframes spinner1 {
+  to {
+  transform: rotate(360deg);
+  }
+  }
+
+  

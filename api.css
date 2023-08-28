@@ -1,0 +1,184 @@
+/* Define your color variables */
+:root {
+    --black: #000000;
+    --cornflower-lilac: white;
+    --salmon: #5E17EB;
+    --white: #ffffff;
+    --your-pink: #9968fc;
+  }
+  
+
+
+  #api-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  /* Styles for the .c-checkbox class */
+  .c-checkbox {
+    display: none;
+  }
+  
+  .c-checkbox:checked + .c-formContainer .c-form {
+    width: 400px;
+  }
+  
+  .c-checkbox:checked + .c-formContainer .c-form__toggle {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  
+  .c-checkbox:checked + .c-formContainer .c-form__input,
+  .c-checkbox:checked + .c-formContainer .c-form__buttonLabel {
+    transition: 0.2s 0.1s;
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .apiset{
+    content: 'Thank You! \1F60A';
+  }
+  
+ 
+  
+  /* Styles for the .c-formContainer, .c-form, and .c-form__toggle classes */
+  .c-formContainer,
+  .c-form,
+  .c-form__toggle {
+    height: 50px;
+  }
+  
+  .c-formContainer {
+    font-weight: 700;
+    
+  }
+  
+  .c-form,
+  .c-form__toggle {
+    position: absolute;
+    border-radius: 25px;
+    background-color: var(--white);
+    transition: 0.2s;
+    width: 100px;
+  }
+  
+  .c-form {
+    left: 50%;
+    padding: 5px;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .c-form__toggle {
+    color: var(--salmon);
+    top: 0;
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .c-form__toggle::before {
+    font-size: 14px;
+    font-weight: bold;
+    content: attr(data-title);
+  }
+  
+  /* Styles for the .c-form__input, .c-form__button, and .c-form__buttonLabel classes */
+  .c-form__input,
+  #c-form_button {
+    font: inherit;
+    border: 0;
+    outline: 0;
+    border-radius: 10%;
+    box-sizing: border-box;
+  }
+  
+  .c-form__input,
+  .c-form__buttonLabel {
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.7);
+    transition: 0s;
+  }
+  
+  .c-form__input {
+    color: var(--your-pink);
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    font-size: 16px;
+    padding: 5px 5px;
+   box-shadow: #dbdbdb27 0px 7px 20px 0px;
+    
+  }
+  
+  .c-form__input::placeholder {
+    color: currentColor;
+  }
+  
+  .c-form__input:required:valid {
+    color: var(--salmon);
+  }
+  
+  .c-form__input:required:valid + .c-form__buttonLabel {
+    color: var(--white);
+  }
+  
+  .c-form__input:required:valid + .c-form__buttonLabel::before {
+    pointer-events: initial;
+  }
+  
+  .c-form__buttonLabel {
+    color: var(--cornflower-lilac);
+    height: 100%;
+    width: auto;
+    position: relative;
+  }
+  
+  .c-form__buttonLabel::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    cursor: pointer;
+  }
+  
+  #c-form_button {
+    align-items: center;
+    background-image: radial-gradient(100% 100% at 100% 0, #9968fc 0, #5E17EB 100%);
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: center;
+    font-weight: lighter;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    
+    color: inherit;
+    padding: 0;
+    height: 100%;
+    width: 70px;
+    border-radius: 25px;
+    
+  }
+  
+  #c-form_button:hover{
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #5500ff 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+
+  #c-form_button:active{
+    box-shadow: none;
+  }

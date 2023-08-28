@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prompt Wizard</title>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+  <link rel="stylesheet" type="text/css" href="content.css">
+  <link rel="stylesheet" type="text/css" href="api.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container">
+    <div id="logo"><img id="logoimg"src=images/logo.svg></div>
+    <div class="input-container">
+      <input id="userPromptInput" type="text" placeholder="Enter your prompt..." class="input-field">
+      <button id="enhanceButtonp" class="button-29">Prompt Magic</button>
+    </div>
+    <div id="suggestions" class="suggestions"></div>
+  
+    <div id="api-container">
+      <h1 id="beta">beta</h1>
+
+    <input class="c-checkbox" type="checkbox" id="checkbox">
+    <div class="c-formContainer">
+      <form class="c-form" action="">
+        <input class="c-form__input" placeholder="Your API Key">
+        <label class="c-form__buttonLabel" for="checkbox">
+          <button id="c-form_button" class="c-form__button" type="button">Set</button>
+        </label>
+        <label class="c-form__toggle" for="checkbox" data-title="Set API Key"></label>
+        
+      </form>
+
+    </div>
+    <button id="exportButton">Export Chat History</button>
+
+  </div>
+
+  </div>
+
+  <script src="popup.js"></script>
+  <script src="content.js"></script>
+  <script src="background.js"></script>
+</body>
+</html>
